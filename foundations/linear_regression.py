@@ -13,5 +13,4 @@ class Solution:
     def get_error(self, model_prediction: NDArray[np.float64], ground_truth: NDArray[np.float64]) -> float:
         # Compute mean squared error between predictions and ground truth
         # Round to 5 decimal places
-        mse = np.mean(np.square(model_prediction - ground_truth))
-        return round(mse, 5)
+        return round(np.mean(np.square(model_prediction - ground_truth)), 5)
