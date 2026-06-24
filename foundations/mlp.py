@@ -15,8 +15,6 @@ class Solution:
         
         for i in range(num_layers):
             z = np.dot(current_activation, weights[i]) + biases[i]
-            if i < num_layers - 1:
-                current_activation = np.maximum(0, z)
-            else:
-                current_activation = z
+            current_activation = np.maximum(0, z)
+            
         return np.round(current_activation, 5)
